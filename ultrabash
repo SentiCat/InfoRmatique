@@ -1,0 +1,17 @@
+#!/bin/bash
+
+echo "Steal very important information"
+mkdir veryimpinform
+cd ./veryimpinform
+touch donottouch
+cp donottouch donottouch2
+echo "nothing in here" > donottouch
+echo " ahahahah" > donottouch2
+cat donottouch donottouch2
+tar -vcf  topsecret.tar donottouch
+mv topsecret.tar /home/ubunter/dirsth/
+cd /home/ubunter/dirsth/
+rm -r /home/ubunter/dirsth/veryimpinf
+sudo chmod ugo-rwx topsecret.tar
+ls -l
+
